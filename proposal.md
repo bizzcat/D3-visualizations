@@ -7,7 +7,7 @@ D3js-based Data Visualizations of Open Access Academic Journal MetaData
 
 ## High-Level Product:
 
-It is going to generate SVG-based semi-interactive data visualizations from open access academic journal metadata, and displayed for simple user-interactivity.
+It is going to generate SVG-based semi-interactive data visualizations from open access academic journal metadata. Identified goal is to guide the user through an interactive visual journey depicting the growth and stagnation of certain scientific domains, and give insight to current delineations of the known and the unknown.
 
 
 ## Specific Functionality:
