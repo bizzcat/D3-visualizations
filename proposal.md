@@ -1,23 +1,23 @@
 # Capstone Proposal
 
-## Name:
+### Name:
 
 D3js-based Data Visualizations of Open Access Academic Journal MetaData
 
 
-## High-Level Product:
+### High-Level Product:
 
 It is going to generate SVG-based semi-interactive data visualizations from open access academic journal metadata. Identified goal is to guide the user through an interactive visual journey depicting the growth and stagnation of certain scientific domains, and give insight to current delineations of the known and the unknown.
 
 
-## Specific Functionality:
+### Specific Functionality:
 
 Users will primarily interact with the SVG's using simple procedures such as hovering a mouse over an element, clicking to parse/zoom/collapse, dragging nodes with gravity attributes, etc.. 
 
 There will be minimal user interaction with the dataset, keywords, etc.
 
 
-## Technical ComponentS:
+### Technical ComponentS:
 
 * D3js & SVG — for visualization and interactivity
 * Javascript, HTML & CSS — for front end
@@ -26,22 +26,19 @@ There will be minimal user interaction with the dataset, keywords, etc.
 * Original Data formats: XML, CSV, HTML-based web-scraping
 
 
-
-## Following the data:
+### Following the data:
 
 Raw data in either XML/CSV file, or an HTML web-scrape, will be drawn from the website one time. Relevant data will be parsed using Python, put into class instances, and piped to the DB for storage using Django's ORM. Only the data relevant for SVG generation will be extracted from the database (again, using Django). Then, fixed data is used to create fanciful fun visualizations!
 
 
-## I will need to employ:
+### I will need to employ:
 HTML web-scraping tools (Beautiful Soup)
 Proper python testing
 Proper file hierarchy / nesting
 An HTML and CSS based webpage for hosting of product
 
 
-
-
-## Timeline and order:
+### Timeline and order:
 
 1. D3js visualization and interactivity (1.5 to 2 weeks)
 2. Data parsing and storage (1 week)
