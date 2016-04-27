@@ -1,23 +1,23 @@
-Capstone Proposal
+# Capstone Proposal
 
-Name:
+## Name:
 
 D3js-based Data Visualizations of Open Access Academic Journal MetaData
 
 
-High-Level Product:
+## High-Level Product:
 
 It is going to generate SVG-based semi-interactive data visualizations from open access academic journal metadata, and displayed for simple user-interactivity.
 
 
-Specific Functionality:
+## Specific Functionality:
 
 Users will primarily interact with the SVG's using simple procedures such as hovering a mouse over an element, clicking to parse/zoom/collapse, dragging nodes with gravity attributes, etc.. 
 
 There will be minimal user interaction with the dataset, keywords, etc.
 
 
-Technical ComponentS:
+## Technical ComponentS:
 
 * D3js & SVG — for visualization and interactivity
 * Javascript, HTML & CSS — for front end
@@ -27,12 +27,12 @@ Technical ComponentS:
 
 
 
-Following the data:
+## Following the data:
 
 Raw data in either XML/CSV file, or an HTML web-scrape, will be drawn from the website one time. Relevant data will be parsed using Python, put into class instances, and piped to the DB for storage using Django's ORM. Only the data relevant for SVG generation will be extracted from the database (again, using Django). Then, fixed data is used to create fanciful fun visualizations!
 
 
-**I will need to employ:**
+## I will need to employ:
 HTML web-scraping tools (Beautiful Soup)
 Proper python testing
 Proper file hierarchy / nesting
@@ -41,13 +41,7 @@ An HTML and CSS based webpage for hosting of product
 
 
 
-
-What are the "moving parts"? What are the "modules" you're going to write?
-This is more specific than "Django backend, CSS style, etc." Please specify what specific technical problems you'll have to solve and a guess at the solution, e.g. "a Python module that uses the pillow library to combine two images at half opacity; a database table and Django model that work together to store, retrieve, and search existing images by name".
-
-Timeline
-
-order:
+## Timeline and order:
 
 1. D3js visualization and interactivity (1.5 to 2 weeks)
 2. Data parsing and storage (1 week)
