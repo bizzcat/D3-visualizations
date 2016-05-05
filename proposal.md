@@ -30,6 +30,40 @@ There will be minimal user interaction with the dataset, keywords, etc.
 
 Raw data in either XML/CSV file, or an HTML web-scrape, will be drawn from the website one time. Relevant data will be parsed using Python, put into class instances, and piped to the DB for storage using Django's ORM. Only the data relevant for SVG generation will be extracted from the database (again, using Django). Then, fixed data is used to create fanciful fun visualizations!
 
+Parsed and stored data objects will have these categories:
+
+Academic discipline -- journal title -- key words / subcategories -- article -- article abstract -- date published
+
+Object hierarchy will look something similar to this:
+    
+    Biomedicine
+      
+        -- Royal Academic Journal
+        
+            -- Genetic Engineering
+                -- "Genetic engineering of terpenoid metabolism attracts bodyguards to Arabidopsis"
+                -- Published on: 23 SEP 2009
+                -- ABSTRACT
+                
+            -- ...key word...
+                -- ...article title...
+                -- ...date published...
+                -- ...abstract...
+                
+        -- Journal of Biochemistry
+        
+            -- ...key word...
+                -- ...article title...
+                -- ...date published...
+                -- ...abstract...
+                
+        -- Bioscience Academy 
+        
+            -- ...key word...
+                -- ...article title...
+                -- ...date published...
+                -- ...abstract...
+
 
 ### I will need to employ:
 HTML web-scraping tools (Beautiful Soup)
