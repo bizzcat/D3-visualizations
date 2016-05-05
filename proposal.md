@@ -66,10 +66,10 @@ Object hierarchy will look something similar to this:
 
 
 ### I will need to employ:
-HTML web-scraping tools (Beautiful Soup)
-Proper python testing
-Proper file hierarchy / nesting
-An HTML and CSS based webpage for hosting of product
+- HTML web-scraping tools (Beautiful Soup)
+- Proper python testing
+- Proper file hierarchy / nesting
+- An HTML and CSS based webpage for hosting of product
 
 
 ### Timeline and order:
