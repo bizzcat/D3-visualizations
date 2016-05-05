@@ -20,7 +20,7 @@ There will be minimal user interaction with the dataset, keywords, etc.
 ### Technical ComponentS:
 
 * D3js & SVG — for visualization and interactivity
-* Javascript, HTML & CSS — for front end
+* Javascript, jQuery, HTML & CSS — for front end
 * Python — for data retrieval, parsing of relevant data, and sending to database
 * Django — for storage of parsed data
 * Original Data formats: XML, CSV, HTML-based web-scraping
