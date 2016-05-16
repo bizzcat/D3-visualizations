@@ -85,12 +85,30 @@ XML file sample:
                         </dc:description>
     
 
-### Visuals and Interactions
+### Visual
 
 
 ![alt tag](tree-example.png)
 
-With each branc
+Each brannch in the hierarchy of this tree will be assigned data correspondingly with data hierarchy.
+
+### Interactions
+
+##### MOUSEOVER
+highlights path
+
+##### MOUSEOVER FOR TWO SECONDS 
+continues highlighting path and displays an alt-text containing the data attributes for that branch (ie: if user hovers over the second branch a alt-text displaying Journal Name would appear)
+
+##### CLICK BRANCH 
+Pans that branch to be 'trunk' and all other branches below that path fade away.
+
+##### CLICK LAST BRANCH 
+this last branch is a single article, so instead of panning the screen, it opens up a large text box containing the articles title, abstract, date (and potentially the authors, and the URL link, if I decided to parse more data)
+
+##### SLIDE BAR
+There will be a side bar displayed that is associated with the date of article publication, in which they see the tree grow as more and more articles are published by the selected journals
+
 
 
 ### I will need to employ:
