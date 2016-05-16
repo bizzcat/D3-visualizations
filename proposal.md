@@ -45,6 +45,14 @@ Object hierarchy will look something similar to this:
                 -- Published on: 23 SEP 2009
                 -- ABSTRACT
                 
+                -- ...article title...
+                -- ...date published...
+                -- ...abstract...
+                
+                -- ...article title...
+                -- ...date published...
+                -- ...abstract...
+                
             -- ...key word...
                 -- ...article title...
                 -- ...date published...
@@ -64,11 +72,25 @@ Object hierarchy will look something similar to this:
                 -- ...date published...
                 -- ...abstract...
 
-'''py
-kjnjnkjn
-'''
+XML file sample:
+
+    <dc:subject xsi:type="dcterms:LCSH">Medicine</dc:subject>
+        <dc:title> Royal Academic Journal </dc:title>
+            <dc:subject xsi:type="dcterms:LCSH">Internal medicine</dc:subject>
+                <dc:subject xsi:type="dcterms:LCSH">Diseases of the musculoskeletal system</dc:subject>
+                    <dc:title>Croatian Economic Survey</dc:title>
+                        <dc:date>2006-01-01T00:00:00Z</dc:date>
+                        <dc:description>
+                            O tabagismo é a segunda principal causa mundial de morte, sendo responsável pela morte de um a cada dez adultos (5 milhões por ano). Se os padrões atuais se mantiverem, em 2020 o tabagismo será a causa de 10 milhões de óbitos anuais, segundo a Organização Mundial da Saúde.
+                        </dc:description>
+    
+
+### Visuals and Interactions
 
 
+![alt tag](https://raw.githubusercontent.com/bizzcat/D3-visualizations/tree-example.png)
+
+With each branc
 
 
 ### I will need to employ:
