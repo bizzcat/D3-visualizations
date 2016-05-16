@@ -88,7 +88,7 @@ XML file sample:
 ### Visuals and Interactions
 
 
-![alt tag](D3-visualizations/tree-example.png)
+![alt tag](tree-example.png)
 
 With each branc
 
