@@ -12,7 +12,7 @@ It is going to generate SVG-based semi-interactive data visualizations from open
 
 ### Specific Functionality:
 
-Users will primarily interact with the SVG's using simple procedures such as hovering a mouse over an element, clicking to parse/zoom/collapse, dragging nodes with gravity attributes, etc.. 
+Users will primarily interact with the SVG's using simple procedures such as hovering a mouse over an element, clicking to parse/zoom/collapse, dragging nodes with gravity attributes, etc..
 
 There will be minimal user interaction with the dataset, keywords, etc.
 
@@ -35,38 +35,38 @@ Parsed and stored data objects will have these categories:
 Academic discipline -- journal title -- key words / subcategories -- article -- article abstract -- date published
 
 Object hierarchy will look something similar to this:
-    
+
     Biomedicine
-      
+
         -- Royal Academic Journal
-        
+
             -- Genetic Engineering
                 -- "Genetic engineering of terpenoid metabolism attracts bodyguards to Arabidopsis"
                 -- Published on: 23 SEP 2009
                 -- ABSTRACT
-                
+
                 -- ...article title...
                 -- ...date published...
                 -- ...abstract...
-                
+
                 -- ...article title...
                 -- ...date published...
                 -- ...abstract...
-                
+
             -- ...key word...
                 -- ...article title...
                 -- ...date published...
                 -- ...abstract...
-                
+
         -- Journal of Biochemistry
-        
+
             -- ...key word...
                 -- ...article title...
                 -- ...date published...
                 -- ...abstract...
-                
-        -- Bioscience Academy 
-        
+
+        -- Bioscience Academy
+
             -- ...key word...
                 -- ...article title...
                 -- ...date published...
@@ -83,7 +83,7 @@ XML file sample:
                         <dc:description>
                             O tabagismo é a segunda principal causa mundial de morte, sendo responsável pela morte de um a cada dez adultos (5 milhões por ano). Se os padrões atuais se mantiverem, em 2020 o tabagismo será a causa de 10 milhões de óbitos anuais, segundo a Organização Mundial da Saúde.
                         </dc:description>
-    
+
 
 ### Visual
 
@@ -97,13 +97,13 @@ Each brannch in the hierarchy of this tree will be assigned data correspondingly
 ##### MOUSEOVER
 highlights path
 
-##### MOUSEOVER FOR TWO SECONDS 
+##### MOUSEOVER FOR TWO SECONDS
 continues highlighting path and displays an alt-text containing the data attributes for that branch (ie: if user hovers over the second branch a alt-text displaying Journal Name would appear)
 
-##### CLICK BRANCH 
+##### CLICK BRANCH
 Pans that branch to be 'trunk' and all other branches below that path fade away.
 
-##### CLICK LAST BRANCH 
+##### CLICK LAST BRANCH
 this last branch is a single article, so instead of panning the screen, it opens up a large text box containing the articles title, abstract, date (and potentially the authors, and the URL link, if I decided to parse more data)
 
 ##### SLIDE BAR
@@ -124,4 +124,3 @@ There will be a side bar displayed that is associated with the date of article p
 2. Data parsing and storage (1 week)
 3. Syncing up Backend → DB → Visuals (3 days)
 4. Beautifying front end w/ HTML & CSS and plugging in visuals (2 days)
-
