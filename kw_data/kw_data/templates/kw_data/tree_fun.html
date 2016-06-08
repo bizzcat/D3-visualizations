@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DOAJ data</title>
+  </head>
+
+<style>
+svg {
+	width: 2000px;
+	height: 1300px;
+}
+
+path, line {
+
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  width: 2000px;
+	height: 1300px;
+}
+
+</style>
+
+<div id="chart">
+  <svg>
+
+  </svg>
+</div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="{% static 'kw_data/tree_fun.js' %}"></script>
+
+
+<button class="regenerate">Regenerate</button>
+
+</style>
+</html>

@@ -1,0 +1,105 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html style="background: url({% static 'index/cloud-background.jpg' %}) no-repeat center center fixed; ">
+  <head>
+    <meta charset="utf-8">
+    <title>KH portfolio</title>
+    <link href="{% static 'index/index.css' %}" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class='navbar'>
+      <section class='logo'>
+        <img src="{% static 'index/logo.png' %}"></img>
+      </section>
+      <p class='nav'>
+        main
+      </p>
+      <p class='nav'>
+        bio
+      </p>
+      <p class='nav'>
+        blog
+      </p>
+      <p class='nav'>
+        contact
+      </p>
+      <!-- <img src="{% static 'index/main2.png' %}" class='nav'></img>
+      <img src="{% static 'index/bio.png' %}" class='nav'></img>
+      <img src="{% static 'index/blog.png' %}" class='nav'></img>
+      <img src="{% static 'index/contact.png' %}" class='nav'></img> -->
+
+    </div>
+
+
+    <div class='empty-block'>
+    </div>
+
+    <div class='chapter'>
+      <p class='chapter-logo'>visualizations</p>
+      <!-- <img src="{% static 'index/visualizations-logo.png' %}" class='container-logo'></img> -->
+      <div class='container'>
+
+        <section class='demo'>
+          <a href="{% url 'radial_collapsible' %}"><img src="{% static 'index/radial-collapsible.png' %}" class='avatar'></img></a>
+          <div class='buttons'>
+            <a href='https://github.com/bizzcat/codeguild/tree/master/final/tree/kw_data/kw_data/static/kw_data' target="_blank"><img src="{% static 'index/github.png' %}" class='github-button'></img></a>
+          <a href='https://codepen.io/bizzcat/pen/ezpryq' target="_blank"><img src="{% static 'index/codepen.png' %}" class='codepen-button'></img></a>
+          </div>
+        </section>
+
+        <section class='demo'>
+          <a href="{% url 'tree_fun' %}"><img src="{% static 'index/tree_fun_png.png' %}" class='avatar'></img></a>
+          <div class='buttons'>
+            <a href='https://github.com/bizzcat/codeguild/tree/master/final/tree/kw_data/kw_data/static/kw_data' target="_blank"><img src="{% static 'index/github.png' %}" class='github-button'></img></a>
+          <a href='https://codepen.io/bizzcat/pen/ezpryq' target="_blank"><img src="{% static 'index/codepen.png' %}" class='codepen-button'></img></a>
+          </div>
+        </section>
+
+        <section class='demo'>
+          <a href="{% url 'radial_collapsible' %}"><img src="{% static 'index/radial-collapsible.png' %}" class='avatar'></img></a>
+          <div class='buttons'>
+            <a href='https://github.com/bizzcat/codeguild/tree/master/final/tree/kw_data/kw_data/static/kw_data' target="_blank"><img src="{% static 'index/github.png' %}" class='github-button'></img></a>
+          <a href='https://codepen.io/bizzcat/pen/ezpryq' target="_blank"><img src="{% static 'index/codepen.png' %}" class='codepen-button'></img></a>
+          </div>
+        </section>
+
+      </div>
+
+      <div class='container'>
+
+        <section class='demo'>
+          <a href="{% url 'tree_fun' %}"><img src="{% static 'index/tree_fun_png.png' %}" class='avatar'></img></a>
+          <div class='buttons'>
+            <a href='https://github.com/bizzcat/codeguild/tree/master/final/tree/kw_data/kw_data/static/kw_data' target="_blank"><img src="{% static 'index/github.png' %}" class='github-button'></img></a>
+          <a href='https://codepen.io/bizzcat/pen/ezpryq' target="_blank"><img src="{% static 'index/codepen.png' %}" class='codepen-button'></img></a>
+          </div>
+        </section>
+
+        <section class='demo'>
+          <a href="{% url 'radial_collapsible' %}"><img src="{% static 'index/radial-collapsible.png' %}" class='avatar'></img></a>
+          <div class='buttons'>
+            <a href='https://github.com/bizzcat/codeguild/tree/master/final/tree/kw_data/kw_data/static/kw_data' target="_blank"><img src="{% static 'index/github.png' %}" class='github-button'></img></a>
+          <a href='https://codepen.io/bizzcat/pen/ezpryq' target="_blank"><img src="{% static 'index/codepen.png' %}" class='codepen-button'></img></a>
+          </div>
+        </section>
+
+        <section class='demo'>
+          <a href="{% url 'tree_fun' %}"><img src="{% static 'index/tree_fun_png.png' %}" class='avatar'></img></a>
+          <div class='buttons'>
+            <a href='https://github.com/bizzcat/codeguild/tree/master/final/tree/kw_data/kw_data/static/kw_data' target="_blank"><img src="{% static 'index/github.png' %}" class='github-button'></img></a>
+          <a href='https://codepen.io/bizzcat/pen/ezpryq' target="_blank"><img src="{% static 'index/codepen.png' %}" class='codepen-button'></img></a>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.3.js"></script>
+    <script src="{% static 'index/index.js' %}"></script>
+  </body>
+</html>
