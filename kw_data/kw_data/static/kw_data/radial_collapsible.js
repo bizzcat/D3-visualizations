@@ -27,8 +27,8 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
 root = data_json_str;
-root.x0 = height / 2;
-root.y0 = 0;
+root.x0 = diameter / 2;
+root.y0 = diameter / 2;
 
 root.children.forEach(collapse); // start with all children collapsed
 update(root);
