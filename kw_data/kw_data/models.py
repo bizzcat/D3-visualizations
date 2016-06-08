@@ -44,4 +44,4 @@ class Article(models.Model):
         return self.name
 
     def __repr__(self):
-        return '(Article = {!r})'.format(self.name)
+        return '(Article = {!r})'.format(self.name) 

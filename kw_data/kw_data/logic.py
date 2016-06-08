@@ -2,13 +2,12 @@ from . import models
 
 def get_json_objects_from_models():
     '''
-    * Pulls data from models and creates a properly structured dict in JSON format
-    * each JSON object has two keys, 'name' and 'children'
+    Pulls data from models and returns a properly structured dict in JSON format
     '''
-    data_json_objects = {}
-    temp_journal_dict = {}
-    temp_keyword_dict = {}
-    temp_article_dict = {}
+    data_json_objects = {}   # final dict to be returned
+    temp_journal_dict = {}   # temporary dict for looping
+    temp_keyword_dict = {}   # temporary dict for looping
+    temp_article_dict = {}   # temporary dict for looping
 
     for field in models.Field.objects.all():
         data_json_objects['name'] = field.name
@@ -37,6 +36,10 @@ def get_json_objects_from_models():
             temp_journal_dict = {}
 
     return data_json_objects
+
+
+
+
 
 
 #################################################################################### PRINT DEBUGGING ####################################################################################
