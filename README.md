@@ -5,11 +5,10 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
 
 
 ### Guidance for CodeGuild instructor
-This repository is a copy of my personal portfolio Django application, thus some of the files are not relevant to the project.
+This repository is a copy of my personal portfolio Django application, thus some of the files are not relevant to the project. Look below for a listing of relevant files.
 
 
 ##### Layout of relevant files for review:
-
     kw_data
        kw_data
           - api_pull.py
