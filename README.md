@@ -10,4 +10,4 @@ This code is a copy of the Django application containing my personal portfolio, 
 
 Layout of relevant files:
 
-> kw_data
+\ > kw_data
