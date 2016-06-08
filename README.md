@@ -12,17 +12,17 @@ Layout of relevant files for review:
 
  * kw_data
     * kw_data
-        api_pull.py
-        models.py
-        logic.py
-        views.py
-        urls.py
+        - api_pull.py
+        - models.py
+        - logic.py
+        - views.py
+        - urls.py
 
-        - static
-            - kw_data
-                radial_collapsible.js        
-                radial_collapsible.css
+        * static
+            * kw_data
+                - radial_collapsible.js        
+                - radial_collapsible.css
 
-        - templates
-            - kw_data
-                radial_collapsible.html
+        * templates
+            * kw_data
+                - radial_collapsible.html
