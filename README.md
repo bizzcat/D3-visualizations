@@ -10,8 +10,8 @@ This code is a copy of the Django application containing my personal portfolio, 
 
 Layout of relevant files for review:
 
- - kw_data
-    - kw_data
+ * kw_data
+    * kw_data
         api_pull.py
         models.py
         logic.py
@@ -20,7 +20,7 @@ Layout of relevant files for review:
 
         - static
             - kw_data
-                radial_collapsible.js        <!-- visualization code -->
+                radial_collapsible.js        
                 radial_collapsible.css
 
         - templates
