@@ -18,11 +18,11 @@ Layout of relevant files for review:
           - views.py
           - urls.py
 
-           static
+         static
                kw_data
                   - radial_collapsible.js        
                   - radial_collapsible.css
 
-           templates
+         templates
                kw_data
                   - radial_collapsible.html
