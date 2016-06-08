@@ -10,19 +10,19 @@ This code is a copy of the Django application containing my personal portfolio, 
 
 Layout of relevant files for review:
 
- * kw_data
-    * kw_data
+  kw_data
+     kw_data
         - api_pull.py
         - models.py
         - logic.py
         - views.py
         - urls.py
 
-        * static
-            * kw_data
+         static
+             kw_data
                 - radial_collapsible.js        
                 - radial_collapsible.css
 
-        * templates
-            * kw_data
+         templates
+             kw_data
                 - radial_collapsible.html
