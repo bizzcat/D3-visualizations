@@ -31,51 +31,42 @@ This repository is a copy of my personal portfolio Django application, thus some
 
 ### Usage
 
-Setups:
-- clone this repository
+##### Setup:
 
+clone this repository
 
-- create a virtual environment
+create a virtual environment
 
-
-  - activate the virtual environment
+activate the virtual environment
       - 'virtualenv venv'
 
-
-  - download Django using
+download Django using
       - 'pip3 install Django'
 
-
-  - install pythons request module locally because it is not a built-in module
+install pythons request module locally because it is not a built-in module
       - 'pip install requests'
 
-
-  - enter command
+enter command
       - 'python manage.py migrate'
 
-
-  - open Django shell
+open Django shell
       - 'python manage.py shell'
 
-
-  - use command to pull from API and populate local database (takes ~3 minutes)
+use command to pull from API and populate local database (takes ~3 minutes)
       - 'from kw_data import api_pull'
 
-
-  - exit shell
+exit shell
       - 'quit()'
 
-
-  - run Python server
+run Python server
       - 'python manage.py runserver'
 
-
-  - go to URL path '**LOCAL SERVER**/radial_collapsible' to view visualization
-
+go to URL path '**LOCAL SERVER**/radial_collapsible' to view visualization
 
 
 
 
-FOR A FUN VISUALIZATION:
+
+### FOR A FUN VISUALIZATION:
   - go to URL path '/tree_fun'
   - or go to index page (blank URL path), and click on the blue and black PNG
