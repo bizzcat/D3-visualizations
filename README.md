@@ -7,6 +7,8 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
 ## Guidance for CodeGuild instructor
 1. This repository is a copy of my personal portfolio Django application, thus some of the files are not relevant to the project. Look below for a listing of relevant files.
 
+2. Due to shortage of time, the code radial_collapsible.js was pulled from a D3 file found online, and is not a product of my own. Thus, it does not follow the styling and naming conventions required by the course. It is simply a borrowed template for visualizing the data I have pulled.
+
 ##### Layout of relevant files for review:
     kw_data
        kw_data
@@ -26,8 +28,6 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
              kw_data
                 - radial_collapsible.html
                 - index.html
-
-2. Due to shortage of time, the code radial_collapsible.js was pulled from a D3 file found online, and is not a product of my own. Thus, it does not follow the styling and naming conventions required by the course. It is simply a borrowed template for visualizing the data I have pulled.
 
 
 ## setup
