@@ -6,14 +6,13 @@ from . import models
 
 ################################################ CALLING ON DAOJ API ################################################
 def get_total_pages():
-    """
-    DOAJ's API responds with limited page sizes when called, so this function
-    returns a total page count, which is passed to the next function to create a
-    loop that calls each page.
+    """DOAJ's API responds with limited page sizes when called, so this function
+    returns a total page count, which is passed to the next function to create
+    a loop that calls each page.
 
-    * Calls on DOAJ API with pre-set subject query and page size
-    * Identifies total articles and page size
-    * Returns total pages
+    Calls on DOAJ API with pre-set subject query and page size (Computer Software, 100).
+    Identifies total articles and page size.
+    Returns total pages by dividing total articles by page size.
     """
     dummy_url = 'https://doaj.org/api/v1/search/articles/bibjson.subject.term%3Acomputer%20software?pageSize=100'
     dummy_data_raw = requests.get(dummy_url)
@@ -25,10 +24,12 @@ def get_total_pages():
 
 
 def get_raw_data(total_pages):
-    """
-    * Loops through each page and pulls raw data
-    * Appends data to a list
-    * Returns list
+    """Takes in total_pages as argument that is used to call on API and pull data
+    for every page.
+
+    Loops through each page and pulls raw data.
+    Appends data to a list.
+    Returns list.
     """
     data_list = []
     looper = 1
@@ -41,11 +42,12 @@ def get_raw_data(total_pages):
     return data_list
 
 def clean_data(data_list):
-    """
-    * Loops through data list and pulls each article
-    * Passes articles through filters
-    * Appends articles with requisite data to a list
-    * Returns list of articles
+    """Removes all articles from raw data that don't have the required info.
+
+    Loops through data list and pulls each article.
+    Passes articles through filters.
+    Appends articles with requisite data to a list.
+    Returns list of articles.
     """
     article_list = []
     for data in data_list:
@@ -63,21 +65,17 @@ def clean_data(data_list):
 
 ################################################ CREATING DICTIONARY ################################################
 
-def get_journal_list(article_list):
-    """
-    * Loops through each article in article_list and returns a list of journal titles
-    """
-    journal_list = []
+def get_journal_object_list(article_list):
+    """Loops through each article in article_list and returns a list of journal
+    titles in object format."""
+    journal_object_list = []
     for article in article_list:
-        if article['bibjson']['journal']['title'] not in journal_list:
-            journal_list.append(article['bibjson']['journal']['title'])
-    return journal_list
+        if article['bibjson']['journal']['title'] not in journal_object_list:
+            journal_object_list.append(article['bibjson']['journal']['title'])
+    return journal_object_list
 
 def get_article_object(article):
-    """
-    * Takes in an article in bulk format and parses desired data
-    * Returns parsed data in object format
-    """
+    """Takes in a single article and returns parsed data in object format."""
     article_name = article['bibjson']['title']
     article_kws = article['bibjson']['keywords']
     article_year = article['created_date'][0:4]
@@ -85,17 +83,20 @@ def get_article_object(article):
     article_url = article['bibjson']['link'][0]['url']
     return {'title': article_name, 'kws': article_kws, 'year': article_year, 'id': article_id, 'url': article_url}
 
-def create_data_dict(journal_list, article_list):
-    """
-    * Loops through journals and creates a dictionary object containing a list of
-        keyword used in that journal
-    * Loops through each keyword, in each journal, and creates a dictionary object
-        containing every article for each keyword using get_article_object()
-    * Returns nested dictionary with journals assigned to keywords, and keywords assigned to articles
+def create_data_dict(journal_object_list, article_list):
+    """Uses Journal and Article objects lists to create a dictionary with proper
+    hierarchy of data.
+
+    Loops through journals and creates a dictionary object containing a list of
+        keyword used in that journal.
+    Loops through each keyword, in each journal, and creates a dictionary object
+        containing every article for each keyword using get_article_object().
+    Returns nested dictionary with journals assigned to keywords, and
+        keywords assigned to articles.
     """
     journal_to_keywords = {}
 
-    for journal in journal_list:
+    for journal in journal_object_list:
         journal_keywords = []
         for article in article_list:
             if article['bibjson']['journal']['title'] == journal:
@@ -109,7 +110,7 @@ def create_data_dict(journal_list, article_list):
             for article in article_list:
                 if article['bibjson']['journal']['title'] == journal:
                     if kw in article['bibjson']['keywords']:
-                        article_object = get_article_object(article)    # Pulls out relevant data for each article
+                        article_object = get_article_object(article)
                         keyword_to_articles[kw].append(article_object)
 
         journal_to_keywords[journal] = keyword_to_articles
@@ -120,11 +121,8 @@ def create_data_dict(journal_list, article_list):
 
 ################################################ STORING IN DJANGO DB ################################################
 def store_data(data_dict):
-    """
-    * Loops through each stage of the data dictionary and stores in Django DB (models),
-        linking each stage together using one-to-many relationships
-    """
-
+    """Loops through each stage of data dict and stores in Django DB (models),
+    linking each stage together using one-to-many relationships."""
     field_name = 'Computer Software'
     field = models.Field(name=field_name)
     field.save()
@@ -152,8 +150,8 @@ def main():
     total_pages = get_total_pages()
     data_list = get_raw_data(total_pages)
     article_list = clean_data(data_list)
-    journal_list = get_journal_list(article_list)
-    data_dict = create_data_dict(journal_list, article_list)
+    journal_object_list = get_journal_object_list(article_list)
+    data_dict = create_data_dict(journal_object_list, article_list)
     store_data(data_dict)
 
 main()

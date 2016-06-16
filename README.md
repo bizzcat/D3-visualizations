@@ -4,9 +4,8 @@ This project is a basic visual representation of Academic Journal MetaData in th
 HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/bizzcat/pen/ezpryq
 
 
-### Guidance for CodeGuild instructor
-This repository is a copy of my personal portfolio Django application, thus some of the files are not relevant to the project. Look below for a listing of relevant files.
-
+## Guidance for CodeGuild instructor
+1. This repository is a copy of my personal portfolio Django application, thus some of the files are not relevant to the project. Look below for a listing of relevant files.
 
 ##### Layout of relevant files for review:
     kw_data
@@ -28,17 +27,19 @@ This repository is a copy of my personal portfolio Django application, thus some
                 - radial_collapsible.html
                 - index.html
 
+2. Due to shortage of time, the code radial_collapsible.js was pulled from a D3 file found online, and is not a product of my own. Thus, it does not follow the styling and naming conventions required by the course. It is simply a borrowed template for visualizing the data I have pulled.
 
-### Usage
 
-##### Setup:
+## setup
 
 1. clone this repository
+  - 'git clone https://github.com/bizzcat/D3-visualizations.git'
 
 2. create a virtual environment
+  - 'virtualenv venv'
 
 3. activate the virtual environment
-  - 'virtualenv venv'
+  - '. venv/bin/activate'
 
 4. download Django using
   - 'pip3 install Django'
@@ -52,7 +53,7 @@ This repository is a copy of my personal portfolio Django application, thus some
 7. open Django shell
   - 'python manage.py shell'
 
-8. use command to pull from API and populate local database (takes ~3 minutes)
+8. import api_pull to pull from API and populate local database (takes ~3 minutes)
   - 'from kw_data import api_pull'
 
 9. exit shell
@@ -67,6 +68,6 @@ This repository is a copy of my personal portfolio Django application, thus some
 
 
 
-### FOR A FUN VISUALIZATION:
+## FOR A FUN VISUALIZATION:
   - go to URL path '**LOCAL SERVER**/tree_fun'
   - or go to index page (blank URL path), and click on the blue and black PNG

@@ -1,3 +1,5 @@
+'use strict';
+
 var diameter = 1000;
 
 var margin = {top: 20, right: 120, bottom: 20, left: 120},
