@@ -47,7 +47,7 @@ def clean_data(data_list):
     * Appends articles with requisite data to a list
     * Returns list of articles
     """
-    article_list = []s
+    article_list = []
     for data in data_list:
         for article in data['results'][0:]:
             if 'EN' in article['bibjson']['journal']['language']:
@@ -126,7 +126,7 @@ def store_data(data_dict):
     """
 
     field_name = 'Computer Software'
-    field = models.Field(name=field)
+    field = models.Field(name=field_name)
     field.save()
 
     for journal in data_dict:

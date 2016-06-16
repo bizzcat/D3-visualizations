@@ -18,3 +18,15 @@
   stroke: #ccc;
   stroke-width: 1.5px;
 }
+
+
+#chart {
+  text-align: center;
+  margin: 4em;
+  padding: 4em;
+}
+
+#chart > svg {
+  border: 0.1em groove rgba(0,0,100,0.3);
+  border-radius: 2em;
+}

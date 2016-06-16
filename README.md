@@ -22,13 +22,49 @@ This repository is a copy of my personal portfolio Django application, thus some
                 - radial_collapsible.js        
                 - radial_collapsible.css
 
+
          templates
              kw_data
                 - radial_collapsible.html
+                - index.html
 
 
 ### Usage
-Simply clone this repository, activate the virtual environment, run the python server, and go to URL path '/radial_collapsible' to view visualization
+
+Setps:
+  - clone this repository
+
+  - create a virtual environment
+
+  - activate the virtual environment
+      'virtualenv venv'
+
+  - download Django using
+      'pip3 install Django'
+
+  - install pythons request module locally because it is not a built-in module
+      'pip install requests'
+
+  - enter command
+      'python manage.py migrate'
+
+  - open Django shell
+      'python manage.py shell'
+
+  - use command to pull from API and populate local database (takes ~3 minutes)
+      'from kw_data import api_pull'
+
+  - exit shell
+      'quit()'
+
+  - run Python server
+       'python manage.py runserver'
+
+  - go to URL path '**LOCAL SERVER**/radial_collapsible' to view visualization
+
+
+
+
 
 FOR A FUN VISUALIZATION:
   - go to URL path '/tree_fun'
