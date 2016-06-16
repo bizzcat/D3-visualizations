@@ -32,10 +32,10 @@ This repository is a copy of my personal portfolio Django application, thus some
 ### Usage
 
 Setups:
-  - clone this repository
+- clone this repository
 
 
-  - create a virtual environment
+- create a virtual environment
 
 
   - activate the virtual environment
