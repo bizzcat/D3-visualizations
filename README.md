@@ -31,13 +31,13 @@ This repository is a copy of my personal portfolio Django application, thus some
 
 ### Usage
 
-Setps:
+Setups:
   - clone this repository
 
   - create a virtual environment
 
   - activate the virtual environment
-      'virtualenv venv'
+      - 'virtualenv venv'
 
   - download Django using
       'pip3 install Django'
