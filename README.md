@@ -22,6 +22,9 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
              kw_data
                 - radial_collapsible.js        
                 - radial_collapsible.css
+             index
+                - index.css   
+
 
 
          templates
