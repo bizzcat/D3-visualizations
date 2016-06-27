@@ -6,7 +6,6 @@
     /*transform: rotate(25919deg);*/
     transform: rotate(10800deg);
   }
-
 }
 
 #spin {
@@ -31,15 +30,6 @@ body {
   /*background: linear-gradient(to bottom right, rgba(360,360,360,1), rgba(360,360,360,1), rgba(0,110,0,0.2));*/
   /*background: rgba(360,360,360,1);*/
   /*background: rgba(0,0,0,0.3);*/
-}
-
-div {
-
-}
-
-
-button {
-
 }
 
 a {
@@ -82,10 +72,6 @@ a {
 
 .nav:hover {
   border-color: rgba(0,0,0,0.1);
-}
-
-.empty-block {
-  height: 40em;
 }
 
 .chapter {
