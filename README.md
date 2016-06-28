@@ -9,7 +9,7 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
 
 2. Due to shortage of time, the code radial_collapsible.js was pulled from a D3 file found online, and is not a product of my own. Thus, it does not follow the styling and naming conventions required by the course. It is simply a borrowed template for visualizing the data I have pulled.
 
-##### Layout of relevant files for review: (go to bottom of file to see files relevant for review)
+##### Layout of relevant files for review:
     kw_data
        kw_data
           - api_pull.py
@@ -52,8 +52,9 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
 7. open Django shell
   - 'python manage.py shell'
 
-8. import api_pull to pull from API and populate local database (takes ~3 minutes)
+8. import api_pull to pull from API and populate local database using main() (takes ~3 minutes)
   - 'from kw_data import api_pull'
+  - 'call main()'
 
 9. exit shell
   - 'quit()'

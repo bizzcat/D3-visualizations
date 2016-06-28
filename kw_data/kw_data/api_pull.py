@@ -183,5 +183,3 @@ def main():
     journal_object_list = get_journal_object_list(article_list)
     data_dict = create_data_dict(journal_object_list, article_list)
     store_data(data_dict)
-
-main()
