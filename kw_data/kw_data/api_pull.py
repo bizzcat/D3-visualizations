@@ -22,7 +22,7 @@ import requests
 
 from . import models
 
-################################################ CALLING ON DAOJ API #########
+# CALLING ON DAOJ API ########################################################
 def get_total_pages():
     """
     DOAJ's API responds with limited page sizes when called, so this function
@@ -86,7 +86,7 @@ def clean_data(data_list):
                                             article_list.append(article)
     return article_list
 
-################################################ CREATING DICTIONARY #########
+# CREATING DICTIONARY ########################################################
 
 
 def get_journal_object_list(article_list):
@@ -146,7 +146,7 @@ def create_data_dict(journal_object_list, article_list):
 
     return journal_to_keywords
 
-################################################ STORING IN DJANGO DB ########
+# STORING IN DJANGO DB #######################################################
 
 
 def store_data(data_dict):
@@ -174,7 +174,7 @@ def store_data(data_dict):
                 # print('\t' + str(kw))
                 # print('\t\t' + str(article))
 
-################################################ CALL ALL FUNCTIONS ##########
+# CALL ALL FUNCTIONS #########################################################
 
 def main():
     total_pages = get_total_pages()
