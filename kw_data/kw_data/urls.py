@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+
 from . import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.render_index, name='index'),
-    url(r'^radial_collapsible$', views.render_radial_collapsible_page, name='radial_collapsible'),
+    url(r'^radial_collapsible$', views.render_radial_collapsible, name='radial_collapsible'),
     url(r'^tree_fun$', views.render_tree_fun, name='tree_fun'),
+    url(r'^article_text_box$', views.render_article_text_box, name='article_text_box'),
+
 ]
- 

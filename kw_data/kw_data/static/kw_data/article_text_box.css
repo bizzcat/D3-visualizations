@@ -1,3 +1,4 @@
+/* LOGO ANIMATION */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -15,7 +16,7 @@
   animation-timing-function: ease-in-out;
 }
 
-
+/* General layout items */
 html {
   background: url(bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -24,12 +25,12 @@ html {
   background-size: cover;
 }
 
-
 body {
   margin: 0em;
-  /*background: linear-gradient(to bottom right, rgba(360,360,360,1), rgba(360,360,360,1), rgba(0,110,0,0.2));*/
-  /*background: rgba(360,360,360,1);*/
-  /*background: rgba(0,0,0,0.3);*/
+}
+
+div {
+  text-align: center;
 }
 
 a {
@@ -37,8 +38,17 @@ a {
 }
 
 
-.navbar {
+/* Nav Bar */
+#nav-bar {
   padding: 0em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar-options {
+  padding: 0em;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,46 +82,4 @@ a {
 
 .nav:hover {
   border-color: rgba(0,0,0,0.1);
-}
-
-.chapter {
-  /*background-color: rgba(360,360,360,0.25);*/
-  border: 0em none;
-  border-radius: 2.5em;
-}
-
-.chapter-logo {
-  font-size: 1.7em;
-  font-family: sans-serif;
-  color: rgba(0,0,0,0.6);
-  margin: 1.3em 1.3em 0.3em;
-  width: 18%;
-}
-
-.container {
-  margin: 0px 0px 3em 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.demo {
-  width: 33%;
-  text-align: center;
-  /*border: 1px solid rgba(0,0,0,0.35);*/
-}
-
-.avatar {
-  width: 100%;
-  /*height: auto;*/
-}
-
-.view-button {
-  width: 60%;
-}
-
-.github-button, .codepen-button {
-  padding: 0% 2%;
-  width: 8%;
-  height: 8%;
 }

@@ -1,7 +1,10 @@
 from . import models
 
 def get_json_objects_from_models():
-    """Pulls data from models and returns a properly structured dict in JSON format."""
+    """
+    Pulls data from models and returns a properly structured dict in JSON
+    format.
+    """
     data_json_objects = {}   # final dict to be returned
     temp_journal_dict = {}   # temporary dict for looping
     temp_keyword_dict = {}   # temporary dict for looping

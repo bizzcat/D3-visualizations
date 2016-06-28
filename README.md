@@ -34,7 +34,6 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
 
 
 ## setup
-
 1. clone this repository
   - 'git clone https://github.com/bizzcat/D3-visualizations.git'
 
@@ -68,9 +67,42 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
 11. go to URL path '**LOCAL SERVER**/radial_collapsible' to view visualization
 
 
-
-
-
 ## FOR A FUN VISUALIZATION:
   - go to URL path '**LOCAL SERVER**/tree_fun'
   - or go to index page (blank URL path), and click on the blue and black PNG
+
+## Notes on reconstruction
+  - Added functionality to radial-collapsible page that takes the user to the URL of an article if clicked
+  - Changed all Javascript quotes to single quotation
+  - .empty-block class'ed <div> in the index page was for content that was never added, therefore it has been deleted
+  - JS linter throws errors for not recognizing assigning multiple attributes to a single attribute like this:
+      object.attr('height', height)
+        .attr('width', width)
+        .attr('href', data.url)
+  - adding new feature on page that allows client to sift through data in <select> <option> format (to satisfy JS requirements)
+  - assigned this new feature its own .js .html and .css files
+  - Cleaned up HTML to appropriately use semantic elements
+
+
+##### Layout of files for *review*
+    kw_data
+       kw_data
+          - api_pull.py
+          - models.py
+          - logic.py
+          - views.py
+          - urls.py
+
+         static
+             kw_data
+                - radial_collapsible.js        
+                - radial_collapsible.css
+             index
+                - index.css   
+
+
+
+         templates
+             kw_data
+                - radial_collapsible.html
+                - index.html

@@ -1,16 +1,16 @@
 import requests
-import json
 import math
+
 from . import models
 
-
-################################################ CALLING ON DAOJ API ################################################
+################################################ CALLING ON DAOJ API #########
 def get_total_pages():
     """DOAJ's API responds with limited page sizes when called, so this function
     returns a total page count, which is passed to the next function to create
     a loop that calls each page.
 
-    Calls on DOAJ API with pre-set subject query and page size (Computer Software, 100).
+    Calls on DOAJ API with pre-set subject query and page size
+        (Computer Software, 100).
     Identifies total articles and page size.
     Returns total pages by dividing total articles by page size.
     """
@@ -21,7 +21,6 @@ def get_total_pages():
     page_size = int(dummy_data_json['pageSize'])
     total_articles = int(dummy_data_json['total'])
     return math.ceil(total_articles / page_size)
-
 
 def get_raw_data(total_pages):
     """Takes in total_pages as argument that is used to call on API and pull data
@@ -63,7 +62,7 @@ def clean_data(data_list):
                                             article_list.append(article)
     return article_list
 
-################################################ CREATING DICTIONARY ################################################
+################################################ CREATING DICTIONARY #########
 
 def get_journal_object_list(article_list):
     """Loops through each article in article_list and returns a list of journal
@@ -117,9 +116,7 @@ def create_data_dict(journal_object_list, article_list):
 
     return journal_to_keywords
 
-
-
-################################################ STORING IN DJANGO DB ################################################
+################################################ STORING IN DJANGO DB ########
 def store_data(data_dict):
     """Loops through each stage of data dict and stores in Django DB (models),
     linking each stage together using one-to-many relationships."""
@@ -143,8 +140,7 @@ def store_data(data_dict):
                 # print('\t' + str(kw))
                 # print('\t\t' + str(article))
 
-
-################################################ CALL ALL FUNCTIONS ################################################
+################################################ CALL ALL FUNCTIONS ##########
 
 def main():
     total_pages = get_total_pages()

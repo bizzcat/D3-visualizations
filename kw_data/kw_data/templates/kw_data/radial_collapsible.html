@@ -11,7 +11,7 @@
 
 
   <body>
-    <!-- <div class='navbar'>
+    <div class='navbar'>
       <section class='logo'>
         <img src="{% static 'index/logo.png' %}"></img>
       </section>
@@ -27,25 +27,10 @@
       <p class='nav'>
         contact
       </p>
-    </div> -->
-    <div id="data-chart">
-      <form name="myform">
-          <select name="journalName" style="width: 150px" size="6" onChange="displayKeywordNames()">
-          </select>
-
-          <select name="kwName" style="width: 150px" size="6" onChange="displayArticleNames()">
-            <option selected disabled hidden style='display: none' value=''></option>
-          </select>
-          <select name="articleName" style="width: 150px" size="6" onChange="displayArticleBox()">
-            <option selected disabled hidden style='display: none' value=''></option>
-          </select>
-      </form>
-      <button name="refresh">Refresh according to selections</button>
     </div>
 
-
-    <!-- <div id="chart">
-    </div> -->
+    <div id="chart">
+    </div>
   </body>
 
   <script src="https://d3js.org/d3.v3.min.js"></script>
