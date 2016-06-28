@@ -1,13 +1,11 @@
-# D3-visualizations (go to 'Notes on Reconstruction' to see files relevant for review)
-This project is a basic visual representation of Academic Journal MetaData in the field of Computer Software. It displays journals publishing in that domain, the keywords they use, and all articles associated with that keyword. It is an interactive visualization created through D3js, a JavaScript based library.
+# D3-visualizations
+This project has basic visual representations of Academic Journal MetaData in the field of Computer Software. It displays journals publishing in that domain, the keywords they use, and all articles associated with that keyword. It has both plain JS and D3js based visuals.
 
-HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/bizzcat/pen/ezpryq
+HTML, CSS, and JS code for radial_collapsible visual hosted on CodePen: https://codepen.io/bizzcat/pen/ezpryq
 
 
 ## Guidance for CodeGuild instructor
-1. This repository is a copy of my personal portfolio Django application, thus some of the files are not relevant to the project. Look below for a listing of relevant files.
-
-2. Due to shortage of time, the code radial_collapsible.js was pulled from a D3 file found online, and is not a product of my own. Thus, it does not follow the styling and naming conventions required by the course. It is simply a borrowed template for visualizing the data I have pulled.
+1. This repository is a copy of an unfinished personal portfolio Django application, thus some of the files are not relevant to the project. Look below for a listing of relevant files.
 
 ##### Layout of relevant files for review:
     kw_data
@@ -22,6 +20,8 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
              kw_data
                 - radial_collapsible.js        
                 - radial_collapsible.css
+                - article_text_box.js
+                - article_text_box.css
              index
                 - index.css   
 
@@ -29,6 +29,7 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
              kw_data
                 - radial_collapsible.html
                 - index.html
+                - article_text_box.html
 
 ## setup
 1. clone this repository
@@ -62,39 +63,8 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
 10. run Python server
   - 'python manage.py runserver'
 
-11. go to URL path '**LOCAL SERVER**/radial_collapsible' to view visualization
-
-
-## FOR A FUN VISUALIZATION:
-  - go to URL path '**LOCAL SERVER**/tree_fun'
-  - or go to index page (blank URL path), and click on the blue and black PNG
-
-# Notes on reconstruction
-  - Changed all Javascript quotes to single quotation
-  - .empty-block class'ed <div> in the index page was for content that was never added, therefore it has been deleted
-  - adding new feature on page that allows client to sift through data in <select> <option> format (to satisfy JS requirements)
-  - assigned this new feature its own .js .html and .css files (article_text_box)
-  - Cleaned up HTML to appropriately use semantic elements
-  - Cleaned up most JS and Python linter violations, leaving those that would hinder performance if fixed
-  - For example - JS linter throws errors for not recognizing chaining multiple attributes to a single object like this:
-        object.attr('height', height)
-          .attr('width', width)
-          .attr('href', data.url)
-
-
-##### Layout of files for *review*
-    kw_data
-       kw_data
-          - api_pull.py   (review: linter, docstring)
-          - models.py  (review: linter, docstring)
-          - logic.py  (review: linter, docstring)
-          - views.py  (review: linter, docstring)
-
-         static
-             kw_data
-                - article_text_box.js  (review: all of it)
-                - article_text_box.css  (review: all of it)
-
-         templates
-             kw_data
-                - article_text_box.html  (review: semantic elements layout)
+11. go to URL path
+  - '**LOCAL SERVER**/radial_collapsible' to view D3-based radial visual
+  - '**LOCAL SERVER**/tree_fun' to view D3-based fun swirlygig
+  - '**LOCAL SERVER**/article_text_box' to view simple JS based data display box
+  - '**LOCAL SERVER**/' to view incomplete home page
