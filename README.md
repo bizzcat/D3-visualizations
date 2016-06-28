@@ -1,4 +1,4 @@
-# D3-visualizations
+# D3-visualizations (go to 'Notes on Reconstruction' to see files relevant for review)
 This project is a basic visual representation of Academic Journal MetaData in the field of Computer Software. It displays journals publishing in that domain, the keywords they use, and all articles associated with that keyword. It is an interactive visualization created through D3js, a JavaScript based library.
 
 HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/bizzcat/pen/ezpryq
@@ -9,7 +9,7 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
 
 2. Due to shortage of time, the code radial_collapsible.js was pulled from a D3 file found online, and is not a product of my own. Thus, it does not follow the styling and naming conventions required by the course. It is simply a borrowed template for visualizing the data I have pulled.
 
-##### Layout of relevant files for review:
+##### Layout of relevant files for review: (go to bottom of file to see files relevant for review)
     kw_data
        kw_data
           - api_pull.py
@@ -25,13 +25,10 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
              index
                 - index.css   
 
-
-
          templates
              kw_data
                 - radial_collapsible.html
                 - index.html
-
 
 ## setup
 1. clone this repository
@@ -71,8 +68,7 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
   - go to URL path '**LOCAL SERVER**/tree_fun'
   - or go to index page (blank URL path), and click on the blue and black PNG
 
-## Notes on reconstruction
-  - Added functionality to radial-collapsible page that takes the user to the URL of an article if clicked
+# Notes on reconstruction
   - Changed all Javascript quotes to single quotation
   - .empty-block class'ed <div> in the index page was for content that was never added, therefore it has been deleted
   - adding new feature on page that allows client to sift through data in <select> <option> format (to satisfy JS requirements)
@@ -88,11 +84,10 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
 ##### Layout of files for *review*
     kw_data
        kw_data
-          - api_pull.py   (review: linter)
-          - models.py  (review: linter)
-          - logic.py  (review: linter)
-          - views.py  (review: linter)
-          - urls.py  (review: linter)
+          - api_pull.py   (review: linter, docstring)
+          - models.py  (review: linter, docstring)
+          - logic.py  (review: linter, docstring)
+          - views.py  (review: linter, docstring)
 
          static
              kw_data
