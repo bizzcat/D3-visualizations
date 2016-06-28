@@ -24,7 +24,8 @@ from . import models
 
 ################################################ CALLING ON DAOJ API #########
 def get_total_pages():
-    """DOAJ's API responds with limited page sizes when called, so this function
+    """
+    DOAJ's API responds with limited page sizes when called, so this function
     returns a total page count, which is passed to the next function to create
     a loop that calls each page.
 
@@ -41,8 +42,10 @@ def get_total_pages():
     total_articles = int(dummy_data_json['total'])
     return math.ceil(total_articles / page_size)
 
+
 def get_raw_data(total_pages):
-    """Takes in total_pages as argument that is used to call on API and pull data
+    """
+    Take in total_pages as argument that is used to call on API and pull data
     for every page.
 
     Loops through each page and pulls raw data.
@@ -59,8 +62,10 @@ def get_raw_data(total_pages):
         looper += 1
     return data_list
 
+
 def clean_data(data_list):
-    """Removes all articles from raw data that don't have the required info.
+    """
+    Remove all articles from raw data that don't have the required info.
 
     Loops through data list and pulls each article.
     Passes articles through filters.
@@ -83,17 +88,21 @@ def clean_data(data_list):
 
 ################################################ CREATING DICTIONARY #########
 
+
 def get_journal_object_list(article_list):
-    """Loops through each article in article_list and returns a list of journal
-    titles in object format."""
+    """
+    Loop through each article in article_list and returns a list of journal
+    titles in object format.
+    """
     journal_object_list = []
     for article in article_list:
         if article['bibjson']['journal']['title'] not in journal_object_list:
             journal_object_list.append(article['bibjson']['journal']['title'])
     return journal_object_list
 
+
 def get_article_object(article):
-    """Takes in a single article and returns parsed data in object format."""
+    """Take in a single article and returns parsed data in object format."""
     article_name = article['bibjson']['title']
     article_kws = article['bibjson']['keywords']
     article_year = article['created_date'][0:4]
@@ -101,8 +110,10 @@ def get_article_object(article):
     article_url = article['bibjson']['link'][0]['url']
     return {'title': article_name, 'kws': article_kws, 'year': article_year, 'id': article_id, 'url': article_url}
 
+
 def create_data_dict(journal_object_list, article_list):
-    """Uses Journal and Article objects lists to create a dictionary with proper
+    """
+    Use Journal and Article objects lists to create a dictionary with proper
     hierarchy of data.
 
     Loops through journals and creates a dictionary object containing a list of
@@ -136,9 +147,13 @@ def create_data_dict(journal_object_list, article_list):
     return journal_to_keywords
 
 ################################################ STORING IN DJANGO DB ########
+
+
 def store_data(data_dict):
-    """Loops through each stage of data dict and stores in Django DB (models),
-    linking each stage together using one-to-many relationships."""
+    """
+    Loop through each stage of data dict and stores in Django DB (models),
+    linking each stage together using one-to-many relationships.
+    """
     field_name = 'Computer Software'
     field = models.Field(name=field_name)
     field.save()
@@ -154,7 +169,7 @@ def store_data(data_dict):
             for article in data_dict[journal][kw]:
                 article_object = models.Article(name=article['title'], year=article['year'], url=article['url'], keyword=keyword_object, journal=journal_object)
                 article_object.save()
-                ### PRINT DEBUGGING ###
+                # PRINT DEBUGGING ###
                 # print(str(journal))
                 # print('\t' + str(kw))
                 # print('\t\t' + str(article))
