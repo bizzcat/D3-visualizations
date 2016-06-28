@@ -1,5 +1,20 @@
-from django.shortcuts import render
+"""
+This module serves as the views page for the whole app that cooks up and serves
+up a rendering for each template page.
+
+View rendering functions:
+    render_index
+    render_tree_fun
+    render_radial_collapsible
+    render_article_text_box
+
+Each of them are called in urls.py
+"""
+
 from json import dumps
+
+from django.shortcuts import render
+
 from . import logic
 
 def render_index(request):

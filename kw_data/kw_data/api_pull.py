@@ -1,5 +1,24 @@
-import requests
+"""
+Use this module to:
+    - call on DOAJ api to get data for 'computer software' academic discipline
+    - to clean pulled data
+    - to put clean data in dictionary format
+    - store data in Django models database
+
+To perform all of the above, import api_pull in Django shell and call 'main()'
+
+Else, call each function individually:
+    total_pages = get_total_pages()
+    data_list = get_raw_data(total_pages)
+    article_list = clean_data(data_list)
+    journal_object_list = get_journal_object_list(article_list)
+    data_dict = create_data_dict(journal_object_list, article_list)
+    store_data(data_dict)
+"""
+
 import math
+
+import requests
 
 from . import models
 

@@ -75,34 +75,30 @@ HTML, CSS, and JS code for visualization hosted on CodePen: https://codepen.io/b
   - Added functionality to radial-collapsible page that takes the user to the URL of an article if clicked
   - Changed all Javascript quotes to single quotation
   - .empty-block class'ed <div> in the index page was for content that was never added, therefore it has been deleted
-  - JS linter throws errors for not recognizing assigning multiple attributes to a single attribute like this:
-      object.attr('height', height)
-        .attr('width', width)
-        .attr('href', data.url)
   - adding new feature on page that allows client to sift through data in <select> <option> format (to satisfy JS requirements)
-  - assigned this new feature its own .js .html and .css files
+  - assigned this new feature its own .js .html and .css files (article_text_box)
   - Cleaned up HTML to appropriately use semantic elements
+  - Cleaned up most JS and Python linter violations, leaving those that would hinder performance if fixed
+  - For example - JS linter throws errors for not recognizing chaining multiple attributes to a single object like this:
+        object.attr('height', height)
+          .attr('width', width)
+          .attr('href', data.url)
 
 
 ##### Layout of files for *review*
     kw_data
        kw_data
-          - api_pull.py
-          - models.py
-          - logic.py
-          - views.py
-          - urls.py
+          - api_pull.py   (review: linter)
+          - models.py  (review: linter)
+          - logic.py  (review: linter)
+          - views.py  (review: linter)
+          - urls.py  (review: linter)
 
          static
              kw_data
-                - radial_collapsible.js        
-                - radial_collapsible.css
-             index
-                - index.css   
-
-
+                - article_text_box.js  (review: all of it)
+                - article_text_box.css  (review: all of it)
 
          templates
              kw_data
-                - radial_collapsible.html
-                - index.html
+                - article_text_box.html  (review: semantic elements layout)

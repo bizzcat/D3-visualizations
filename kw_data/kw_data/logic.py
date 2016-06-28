@@ -1,3 +1,22 @@
+"""
+This module is used to pull data from the Django Models Database
+
+Import get_json_objects_from_models() to return the data in json object
+format. Returns as variable 'data_json_objects'.
+
+'data_json_objects' hierarchy:
+
+name: "Field name"
+children:
+    name: "Journal name"
+    children:
+        name: "Keyword name"
+        children:
+            name: "Article name"
+            year: "Article year"
+            url: "Article url"
+"""
+
 from . import models
 
 def get_json_objects_from_models():
