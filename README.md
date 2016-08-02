@@ -3,34 +3,6 @@ This project has basic visual representations of Academic Journal MetaData in th
 
 HTML, CSS, and JS code for radial_collapsible visual hosted on CodePen: https://codepen.io/bizzcat/pen/ezpryq
 
-
-## Guidance for CodeGuild instructor
-1. This repository is a copy of an unfinished personal portfolio Django application, thus some of the files are not relevant to the project. Look below for a listing of relevant files.
-
-##### Layout of relevant files for review:
-    kw_data
-       kw_data
-          - api_pull.py
-          - models.py
-          - logic.py
-          - views.py
-          - urls.py
-
-         static
-             kw_data
-                - radial_collapsible.js        
-                - radial_collapsible.css
-                - article_text_box.js
-                - article_text_box.css
-             index
-                - index.css   
-
-         templates
-             kw_data
-                - radial_collapsible.html
-                - index.html
-                - article_text_box.html
-
 ## setup
 1. clone this repository
   - 'git clone https://github.com/bizzcat/D3-visualizations.git'
